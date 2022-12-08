@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop/src/screens/home/body.dart';
+import 'package:shop/components/app.bottom.navigation.bar.dart';
+import 'package:shop/src/screens/home/components/body.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,6 +10,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(),
       body: Body(),
+      bottomNavigationBar: AppBottomNavigationBar(),
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/src/screens/home/recomend.clothes.card.dart';
+import 'package:shop/src/screens/home/components/recomends/recomend.clothes.card.dart';
 
 class RecomendsClothes extends StatelessWidget {
   const RecomendsClothes({
