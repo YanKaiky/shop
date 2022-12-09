@@ -32,6 +32,14 @@ class FeaturedClothes extends StatelessWidget {
             image: 'assets/images/air-jordan-1-mid-se.png',
             press: (() {}),
           ),
+          FeatureClothesCard(
+            image: 'assets/images/air-jordan-1-retro-high-og.png',
+            press: (() {}),
+          ),
+          FeatureClothesCard(
+            image: 'assets/images/air-jordan-1-mid-se-red.png',
+            press: (() {}),
+          ),
         ],
       ),
     );

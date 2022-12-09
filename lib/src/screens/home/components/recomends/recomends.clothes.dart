@@ -20,10 +20,24 @@ class RecomendsClothes extends StatelessWidget {
             press: () {},
           ),
           RecomendClothesCard(
+            image: 'assets/images/mercurial-superfly-9-academy.png',
+            title: 'Superfly 9',
+            category: 'Futsal',
+            price: 810,
+            press: () {},
+          ),
+          RecomendClothesCard(
             image: 'assets/images/nike-beco-2.png',
             title: 'Nike Beco 2',
             category: 'Society',
             price: 309,
+            press: () {},
+          ),
+          RecomendClothesCard(
+            image: 'assets/images/nike-mercurial-vapor-15-club.png',
+            title: 'Vapor 15',
+            category: 'Futsal',
+            price: 369,
             press: () {},
           ),
           RecomendClothesCard(
@@ -38,6 +52,13 @@ class RecomendsClothes extends StatelessWidget {
             title: 'Ultra Venom',
             category: 'Campo',
             price: 1999,
+            press: () {},
+          ),
+          RecomendClothesCard(
+            image: 'assets/images/nike-mercurial-superfly-8-club.png',
+            title: 'Superfly 8',
+            category: 'Futsal',
+            price: 300,
             press: () {},
           ),
         ],
