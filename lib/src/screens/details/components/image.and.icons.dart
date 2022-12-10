@@ -38,7 +38,7 @@ class ImageAndIcons extends StatelessWidget {
                     Spacer(),
                     IconCard(icon: Icons.wb_sunny_outlined),
                     IconCard(icon: Icons.snowshoeing_sharp),
-                    IconCard(icon: Icons.local_grocery_store_outlined),
+                    IconCard(icon: Icons.add_shopping_cart_rounded),
                     IconCard(icon: Icons.favorite_outline_rounded),
                   ],
                 ),

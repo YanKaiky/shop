@@ -29,7 +29,7 @@ class TitleAndPrice extends StatelessWidget {
                       ),
                 ),
                 TextSpan(
-                  text: category,
+                  text: "$category\n",
                   style: TextStyle(
                     fontSize: 20,
                     color: yPrimaryColor,
@@ -43,10 +43,10 @@ class TitleAndPrice extends StatelessWidget {
           Text(
             '\$$price',
             style: Theme.of(context).textTheme.headline5?.copyWith(
-                  color: yPrimaryColor,
+                  color: Colors.green,
                   fontSize: 25,
                 ),
-          )
+          ),
         ],
       ),
     );

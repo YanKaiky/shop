@@ -40,15 +40,9 @@ class HeaderWithSearchBox extends StatelessWidget {
                       ),
                 ),
                 Spacer(),
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(width: 5, color: Colors.white),
-                    borderRadius: BorderRadius.circular(100), //<-- SEE HERE
-                  ),
-                  child: Image.asset(
-                    'assets/images/shop.png',
-                    width: 65,
-                  ),
+                Image.asset(
+                  'assets/images/shop.png',
+                  width: 80,
                 ),
               ],
             ),

@@ -38,14 +38,14 @@ class AppBottomNavigationBar extends StatelessWidget {
           ),
           IconButton(
             icon: Icon(
-              Icons.favorite_border_outlined,
+              Icons.notifications_outlined,
               color: yPrimaryColor,
             ),
             onPressed: () {},
           ),
           IconButton(
             icon: Icon(
-              Icons.person_outline,
+              Icons.favorite_border_outlined,
               color: yPrimaryColor,
             ),
             onPressed: () {},

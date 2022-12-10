@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shop/src/utils/constants.dart';
 
-class MenuDrawer extends StatelessWidget {
-  const MenuDrawer({
+class AppMenuDrawer extends StatelessWidget {
+  const AppMenuDrawer({
     Key? key,
   }) : super(key: key);
 
@@ -17,19 +17,18 @@ class MenuDrawer extends StatelessWidget {
                 Image.network('https://www.github.com/YanKaiky.png'),
             accountName: const Text('Yan Kaiky'),
             accountEmail: const Text('yankaikys@gmail.com'),
+            otherAccountsPictures: [
+              IconButton(
+                icon: Icon(Icons.arrow_back_ios, color: Colors.white),
+                onPressed: () => Navigator.pop(context),
+              ),
+            ],
           ),
           ListTile(
             leading: const Icon(Icons.home),
             title: const Text('Home'),
             onTap: () {
               print('home');
-            },
-          ),
-          ListTile(
-            leading: const Icon(Icons.favorite_outlined),
-            title: const Text('Favorites'),
-            onTap: () {
-              print('My Favorites');
             },
           ),
           ListTile(
