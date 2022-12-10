@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/src/screens/home/components/fashion/fashion.clothes.dart';
 import 'package:shop/src/screens/home/components/features/featured.clothes.dart';
 import 'package:shop/src/screens/home/components/header.with.search.box.dart';
 import 'package:shop/src/screens/home/components/recomends/recomends.clothes.dart';
@@ -20,6 +21,8 @@ class Body extends StatelessWidget {
           RecomendsClothes(),
           TitleWithMoreBtn(title: 'Feature clothers', press: () {}),
           FeaturedClothes(),
+          TitleWithMoreBtn(title: 'Fashion', press: () {}),
+          FashionClothes(),
           SizedBox(height: yDefaultPadding),
         ],
       ),
