@@ -53,7 +53,7 @@ class Body extends StatelessWidget {
                   ),
                   child: Text(
                     'Description',
-                    style: TextStyle(fontSize: 16),
+                    style: TextStyle(color: yPrimaryColor, fontSize: 16),
                   ),
                 ),
               ),
