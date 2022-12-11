@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shop/components/app.bottom.navigation.bar.dart';
 import 'package:shop/src/screens/home/components/body.dart';
 import 'package:shop/components/app.menu.drawer.dart';
-import 'package:shop/src/screens/purchase/purchase.screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,14 +14,8 @@ class HomeScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.local_grocery_store_outlined),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => PurchaseScreen(),
-                ),
-              );
-            },
+            onPressed: () =>
+                Navigator.of(context).pushReplacementNamed('/purschase'),
           ),
         ],
       ),

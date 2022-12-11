@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shop/src/screens/favorites/favorites.screen.dart';
-import 'package:shop/src/screens/home/home.screen.dart';
-import 'package:shop/src/screens/notifications/notifications.screen.dart';
 import 'package:shop/src/utils/constants.dart';
 
 class AppBottomNavigationBar extends StatelessWidget {
@@ -11,6 +8,8 @@ class AppBottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final route = ModalRoute.of(context)?.settings.name;
+
     return Container(
       padding: EdgeInsets.only(
         left: yDefaultPadding * 2,
@@ -33,46 +32,33 @@ class AppBottomNavigationBar extends StatelessWidget {
         children: <Widget>[
           IconButton(
             icon: Icon(
-              Icons.shopping_bag_rounded,
+              route == '/'
+                  ? Icons.shopping_bag_rounded
+                  : Icons.shopping_bag_outlined,
               // Icons.shopping_bag_outlined,
               color: yPrimaryColor,
             ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => HomeScreen(),
-                ),
-              );
-            },
+            onPressed: () => Navigator.of(context).pushReplacementNamed('/'),
           ),
           IconButton(
             icon: Icon(
-              Icons.notifications_outlined,
+              route == '/notifications'
+                  ? Icons.notifications_rounded
+                  : Icons.notifications_outlined,
               color: yPrimaryColor,
             ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => NotificationsScreen(),
-                ),
-              );
-            },
+            onPressed: () =>
+                Navigator.of(context).pushReplacementNamed('/notifications'),
           ),
           IconButton(
             icon: Icon(
-              Icons.favorite_border_outlined,
+              route == '/favorites'
+                  ? Icons.favorite_rounded
+                  : Icons.favorite_border_outlined,
               color: yPrimaryColor,
             ),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => FavoritesScreen(),
-                ),
-              );
-            },
+            onPressed: () =>
+                Navigator.of(context).pushReplacementNamed('/favorites'),
           ),
         ],
       ),

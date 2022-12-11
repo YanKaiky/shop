@@ -12,7 +12,7 @@ class FavoritesScreen extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_rounded, color: Colors.white),
-          onPressed: () => Navigator.pop(context),
+          onPressed: () => Navigator.of(context).pushReplacementNamed('/'),
         ),
         actions: const [
           Center(

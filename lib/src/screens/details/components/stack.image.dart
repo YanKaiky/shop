@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/src/screens/details/components/fitting.size.dart';
 import 'package:shop/src/screens/details/components/title.and.price.dart';
 import 'package:shop/src/utils/constants.dart';
 
@@ -20,8 +21,8 @@ class StackImage extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(
-                vertical: yDefaultPadding * 2,
+              padding: EdgeInsets.only(
+                top: yDefaultPadding * 2,
               ),
               child: Stack(
                 children: [
@@ -40,7 +41,8 @@ class StackImage extends StatelessWidget {
                           Icons.arrow_back_rounded,
                           color: yPrimaryColor,
                         ),
-                        onPressed: () => Navigator.pop(context),
+                        onPressed: () =>
+                            Navigator.of(context).pushReplacementNamed('/'),
                       ),
                       Spacer(),
                       IconButton(
@@ -60,93 +62,47 @@ class StackImage extends StatelessWidget {
               category: 'Confort',
               price: 1429,
             ),
+            FittingSize(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: yDefaultPadding),
-              child: Column(
+              child: Row(
                 children: [
-                  Divider(),
-                  Row(
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          side: BorderSide(color: Colors.black, width: 1.0),
-                        ),
-                        child: SizedBox(
-                          child: Text(
-                            '38',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 17,
-                              color: Colors.black,
-                            ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.star_rate_rounded,
+                            color: Colors.yellow.shade800,
                           ),
-                        ),
-                        onPressed: () {
-                          print('Number');
-                        },
-                      ),
-                      SizedBox(width: 5),
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          side: BorderSide(color: Colors.black, width: 1.0),
-                        ),
-                        child: SizedBox(
-                          child: Text(
-                            '39',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 17,
-                              color: Colors.black,
-                            ),
+                          Icon(
+                            Icons.star_rate_rounded,
+                            color: Colors.yellow.shade800,
                           ),
-                        ),
-                        onPressed: () {
-                          print('Number');
-                        },
-                      ),
-                      SizedBox(width: 5),
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          side: BorderSide(color: Colors.black, width: 1.0),
-                        ),
-                        child: SizedBox(
-                          child: Text(
-                            '40',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 17,
-                              color: Colors.black,
-                            ),
+                          Icon(
+                            Icons.star_rate_rounded,
+                            color: Colors.yellow.shade800,
                           ),
-                        ),
-                        onPressed: () {
-                          print('Number');
-                        },
-                      ),
-                      SizedBox(width: 5),
-                      OutlinedButton(
-                        style: OutlinedButton.styleFrom(
-                          side: BorderSide(color: Colors.black, width: 1.0),
-                        ),
-                        child: SizedBox(
-                          child: Text(
-                            '41',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 17,
-                              color: Colors.black,
-                            ),
+                          Icon(
+                            Icons.star_border_purple500_rounded,
+                            color: Colors.yellow.shade800,
                           ),
-                        ),
-                        onPressed: () {
-                          print('Number');
-                        },
+                          Icon(
+                            Icons.star_border_purple500_rounded,
+                            color: Colors.yellow.shade800,
+                          ),
+                        ],
                       ),
+                      Text('3/5'),
                     ],
                   ),
+                  SizedBox(width: 50),
+                  Text('5.5k Sold'),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
