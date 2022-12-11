@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shop/src/screens/details/components/details.bottom.dart';
 import 'package:shop/src/screens/details/components/stack.image.dart';
 import 'package:shop/src/utils/constants.dart';
 
@@ -14,8 +13,7 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           StackImage(size: size),
-          SizedBox(height: yDefaultPadding * 5),
-          DetailsBottom(size: size),
+          SizedBox(height: yDefaultPadding * 5)
         ],
       ),
     );
