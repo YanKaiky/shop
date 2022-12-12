@@ -13,7 +13,7 @@ class Body extends StatelessWidget {
       child: Column(
         children: <Widget>[
           StackImage(size: size),
-          SizedBox(height: yDefaultPadding * 5)
+          SizedBox(height: yDefaultPadding),
         ],
       ),
     );
