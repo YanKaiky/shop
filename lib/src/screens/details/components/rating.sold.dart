@@ -13,10 +13,10 @@ class RatingAndSold extends StatelessWidget {
       child: Row(
         children: [
           Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
                     Icons.star_rate_rounded,
@@ -40,7 +40,10 @@ class RatingAndSold extends StatelessWidget {
                   ),
                 ],
               ),
-              Text('3/5'),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Text('3/5'),
+              ),
             ],
           ),
           SizedBox(width: 50),

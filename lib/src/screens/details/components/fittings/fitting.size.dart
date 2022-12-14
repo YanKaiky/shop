@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/src/screens/details/components/fittings/button.color.dart';
 import 'package:shop/src/screens/details/components/fittings/button.size.dart';
 import 'package:shop/src/utils/constants.dart';
 
@@ -26,6 +27,20 @@ class FittingSize extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20),
+          Row(
+            children: const [
+              ButtonColor(color: Colors.red),
+              SizedBox(width: 5),
+              ButtonColor(color: Colors.purple),
+              SizedBox(width: 5),
+              ButtonColor(color: Colors.orange),
+              SizedBox(width: 5),
+              ButtonColor(color: Colors.black),
+              SizedBox(width: 5),
+              ButtonColor(color: Colors.blue),
+              SizedBox(width: 5),
+            ],
+          )
         ],
       ),
     );
