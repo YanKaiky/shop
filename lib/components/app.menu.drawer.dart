@@ -40,8 +40,7 @@ class AppMenuDrawer extends StatelessWidget {
             leading: const Icon(Icons.logout_rounded),
             title: const Text('Logout'),
             onTap: () {
-              print('logout');
-              // Navigator.of(context).pushReplacementNamed('/login');
+              Navigator.of(context).pushReplacementNamed('/login');
             },
           ),
         ],

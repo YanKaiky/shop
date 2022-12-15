@@ -17,12 +17,10 @@ class App extends StatelessWidget {
       title: 'Shop',
       theme: ThemeData(
         scaffoldBackgroundColor: yBackgroundColor,
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blue,
         textTheme: Theme.of(context).textTheme.apply(bodyColor: yTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        appBarTheme: AppBarTheme(
-          backgroundColor: yPrimaryColor, //use your hex code here
-        ),
+        appBarTheme: AppBarTheme(backgroundColor: yPrimaryColor),
       ),
       initialRoute: '/login',
       routes: {
