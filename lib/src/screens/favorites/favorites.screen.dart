@@ -11,7 +11,8 @@ class FavoritesScreen extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back_rounded, color: Colors.white),
-          onPressed: () => Navigator.of(context).pushReplacementNamed('/'),
+          onPressed: () =>
+              Navigator.of(context).pushReplacementNamed('/browse'),
         ),
         actions: const [
           Center(

@@ -27,7 +27,7 @@ class AppMenuDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.home),
             title: const Text('Home'),
-            onTap: () => Navigator.of(context).pushReplacementNamed('/'),
+            onTap: () => Navigator.of(context).pushReplacementNamed('/browse'),
           ),
           ListTile(
             leading: const Icon(Icons.local_grocery_store_outlined),

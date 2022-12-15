@@ -17,7 +17,8 @@ class DetailsScreen extends StatelessWidget {
               Icons.arrow_back_rounded,
               color: Colors.white,
             ),
-            onPressed: () => Navigator.of(context).pushReplacementNamed('/'),
+            onPressed: () =>
+                Navigator.of(context).pushReplacementNamed('/browse'),
           ),
           actions: [
             IconButton(

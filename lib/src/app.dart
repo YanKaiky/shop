@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop/src/screens/details/details.screen.dart';
 import 'package:shop/src/screens/favorites/favorites.screen.dart';
 import 'package:shop/src/screens/home/home.screen.dart';
+import 'package:shop/src/screens/login/login.screen.dart';
 import 'package:shop/src/screens/notifications/notifications.screen.dart';
 import 'package:shop/src/screens/purchase/purchase.screen.dart';
 import 'package:shop/src/utils/constants.dart';
@@ -23,9 +24,10 @@ class App extends StatelessWidget {
           backgroundColor: yPrimaryColor, //use your hex code here
         ),
       ),
-      initialRoute: '/',
+      initialRoute: '/login',
       routes: {
-        '/': (context) => HomeScreen(),
+        '/login': (context) => LoginScreen(),
+        '/browse': (context) => HomeScreen(),
         '/details': (context) => DetailsScreen(),
         '/favorites': (context) => FavoritesScreen(),
         '/notifications': (context) => NotificationsScreen(),
