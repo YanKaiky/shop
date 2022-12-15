@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shop/components/app.bottom.navigation.bar.dart';
 import 'package:shop/src/screens/purchase/components/body.dart';
 
 class PurchaseScreen extends StatelessWidget {
@@ -31,7 +30,6 @@ class PurchaseScreen extends StatelessWidget {
         ],
       ),
       body: Body(),
-      bottomNavigationBar: AppBottomNavigationBar(),
     );
   }
 }

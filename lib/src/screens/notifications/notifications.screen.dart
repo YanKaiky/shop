@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shop/components/app.bottom.navigation.bar.dart';
 import 'package:shop/src/screens/notifications/components/body.dart';
 
 class NotificationsScreen extends StatelessWidget {
@@ -31,7 +30,6 @@ class NotificationsScreen extends StatelessWidget {
         ],
       ),
       body: Body(),
-      bottomNavigationBar: AppBottomNavigationBar(),
     );
   }
 }

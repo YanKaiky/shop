@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shop/components/app.bottom.navigation.bar.dart';
 import 'package:shop/src/screens/favorites/components/body.dart';
 
 class FavoritesScreen extends StatelessWidget {
@@ -31,7 +30,6 @@ class FavoritesScreen extends StatelessWidget {
         ],
       ),
       body: Body(),
-      bottomNavigationBar: AppBottomNavigationBar(),
     );
   }
 }
