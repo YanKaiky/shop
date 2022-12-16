@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shop/components/biometric.dart';
 import 'package:shop/src/screens/login/login.screen.dart';
-import 'package:shop/src/screens/profile/profile.screen.dart';
 import 'package:shop/src/screens/purchase/purchase.screen.dart';
 import 'package:shop/src/utils/constants.dart';
 
@@ -18,7 +18,7 @@ class AppMenuDrawer extends StatelessWidget {
             decoration: BoxDecoration(color: yPrimaryColor),
             onDetailsPressed: () => Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ProfileScreen()),
+              MaterialPageRoute(builder: (context) => Biometric()),
             ),
             currentAccountPicture:
                 Image.network('https://www.github.com/YanKaiky.png'),
@@ -44,7 +44,7 @@ class AppMenuDrawer extends StatelessWidget {
             title: const Text('Profile'),
             onTap: () => Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ProfileScreen()),
+              MaterialPageRoute(builder: (context) => Biometric()),
             ),
           ),
           Spacer(),
