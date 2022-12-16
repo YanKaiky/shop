@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shop/src/screens/login/login.screen.dart';
+import 'package:shop/src/screens/profile/profile.screen.dart';
+import 'package:shop/src/screens/purchase/purchase.screen.dart';
 import 'package:shop/src/utils/constants.dart';
 
 class AppMenuDrawer extends StatelessWidget {
@@ -13,6 +16,10 @@ class AppMenuDrawer extends StatelessWidget {
         children: [
           UserAccountsDrawerHeader(
             decoration: BoxDecoration(color: yPrimaryColor),
+            onDetailsPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfileScreen()),
+            ),
             currentAccountPicture:
                 Image.network('https://www.github.com/YanKaiky.png'),
             accountName: const Text('Yan Kaiky'),
@@ -25,23 +32,32 @@ class AppMenuDrawer extends StatelessWidget {
             ],
           ),
           ListTile(
-            leading: const Icon(Icons.home),
-            title: const Text('Home'),
-            onTap: () => Navigator.of(context).pushReplacementNamed('/browse'),
-          ),
-          ListTile(
             leading: const Icon(Icons.local_grocery_store_outlined),
             title: const Text('Store'),
-            onTap: () =>
-                Navigator.of(context).pushReplacementNamed('/purschase'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PurchaseScreen()),
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.account_circle_outlined),
+            title: const Text('Profile'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfileScreen()),
+            ),
           ),
           Spacer(),
-          ListTile(
-            leading: const Icon(Icons.logout_rounded),
-            title: const Text('Logout'),
-            onTap: () {
-              Navigator.of(context).pushReplacementNamed('/login');
-            },
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16.0),
+            child: ListTile(
+              leading: const Icon(Icons.logout_rounded),
+              title: const Text('Logout'),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => LoginScreen()),
+              ),
+            ),
           ),
         ],
       ),

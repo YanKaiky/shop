@@ -4,6 +4,7 @@ import 'package:shop/src/screens/favorites/favorites.screen.dart';
 import 'package:shop/src/screens/home/home.screen.dart';
 import 'package:shop/src/screens/login/login.screen.dart';
 import 'package:shop/src/screens/notifications/notifications.screen.dart';
+import 'package:shop/src/screens/profile/profile.screen.dart';
 import 'package:shop/src/screens/purchase/purchase.screen.dart';
 import 'package:shop/src/utils/constants.dart';
 
@@ -29,6 +30,7 @@ class App extends StatelessWidget {
         '/details': (context) => DetailsScreen(),
         '/favorites': (context) => FavoritesScreen(),
         '/notifications': (context) => NotificationsScreen(),
+        '/profile': (context) => ProfileScreen(),
         '/purschase': (context) => PurchaseScreen(),
       },
     );

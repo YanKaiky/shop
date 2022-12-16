@@ -5,6 +5,7 @@ import 'package:shop/src/screens/favorites/favorites.screen.dart';
 import 'package:shop/src/screens/home/components/body.dart';
 import 'package:shop/components/app.menu.drawer.dart';
 import 'package:shop/src/screens/notifications/notifications.screen.dart';
+import 'package:shop/src/screens/purchase/purchase.screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -31,8 +32,12 @@ class _HomeScreenState extends State<HomeScreen> {
               actions: [
                 IconButton(
                   icon: Icon(Icons.local_grocery_store_outlined),
-                  onPressed: () =>
-                      Navigator.of(context).pushReplacementNamed('/purschase'),
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PurchaseScreen(),
+                    ),
+                  ),
                 ),
               ],
             )
