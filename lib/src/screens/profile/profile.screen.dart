@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shop/src/screens/profile/components/body.dart';
+import 'package:shop/src/screens/settings/settings.screen.dart';
+import 'package:shop/src/utils/constants.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -11,6 +14,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: yBackgroundColor,
       appBar: AppBar(
         elevation: 0,
         leading: IconButton(
@@ -18,25 +22,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
           onPressed: () =>
               Navigator.of(context).popUntil((route) => route.isFirst),
         ),
-        actions: const [
-          Center(
-            child: Padding(
-              padding: EdgeInsets.only(right: 16.0),
-              child: Text(
-                'Profile',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SettingsScreen(),
                 ),
-              ),
-            ),
-          )
+              );
+            },
+          ),
         ],
       ),
-      body: Center(
-        child: Text('Profile'),
-      ),
+      body: Body(),
     );
   }
 }

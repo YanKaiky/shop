@@ -24,9 +24,7 @@ class YTextField extends StatelessWidget {
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         labelText: label,
-        labelStyle: TextStyle(
-          color: yPrimaryColor, //<-- SEE HERE
-        ),
+        labelStyle: TextStyle(color: yPrimaryColor),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(width: 2.0),
           borderRadius: BorderRadius.circular(12.0),
