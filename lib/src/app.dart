@@ -19,7 +19,7 @@ class App extends StatelessWidget {
       title: 'Shop',
       theme: ThemeData(
         scaffoldBackgroundColor: yBackgroundColor,
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
         textTheme: Theme.of(context).textTheme.apply(bodyColor: yTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
         appBarTheme: AppBarTheme(backgroundColor: yPrimaryColor),

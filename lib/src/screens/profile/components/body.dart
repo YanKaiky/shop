@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop/src/screens/settings/settings.screen.dart';
 import 'package:shop/src/utils/constants.dart';
 
 class Body extends StatefulWidget {
@@ -102,8 +103,10 @@ class _BodyState extends State<Body> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 OutlinedButton(
-                  onPressed: () =>
-                      Navigator.of(context).popUntil((route) => route.isFirst),
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SettingsScreen()),
+                  ),
                   style: OutlinedButton.styleFrom(
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 13),
                     side: BorderSide(color: Colors.grey),
