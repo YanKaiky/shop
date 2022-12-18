@@ -7,6 +7,7 @@ import 'package:shop/src/screens/login/login.screen.dart';
 import 'package:shop/src/screens/notifications/notifications.screen.dart';
 import 'package:shop/src/screens/profile/profile.screen.dart';
 import 'package:shop/src/screens/purchase/purchase.screen.dart';
+import 'package:shop/src/screens/splash/splash.screen.dart';
 import 'package:shop/src/utils/constants.dart';
 
 class App extends StatelessWidget {
@@ -24,8 +25,9 @@ class App extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         appBarTheme: AppBarTheme(backgroundColor: yPrimaryColor),
       ),
-      initialRoute: '/login',
+      initialRoute: '/',
       routes: {
+        '/': (context) => SplashScreen(),
         '/biometric': (context) => Biometric(),
         '/login': (context) => LoginScreen(),
         '/browse': (context) => HomeScreen(),
