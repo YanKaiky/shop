@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop/src/screens/login/components/customshape.dart';
 import 'package:shop/src/utils/constants.dart';
+import 'package:shop/src/utils/user.secure.storage.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -10,8 +11,30 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  TextEditingController? _initialEmail;
+  TextEditingController? _initialPassword;
+
   String email = '';
   String password = '';
+
+  @override
+  void initState() {
+    super.initState();
+    init();
+  }
+
+  Future init() async {
+    final mail = await UserSecureStorage.getEmail() ?? '';
+    final pass = await UserSecureStorage.getPassword() ?? '';
+
+    _initialEmail = TextEditingController(text: mail);
+    _initialPassword = TextEditingController(text: pass);
+
+    setState(() {
+      email = mail;
+      password = pass;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,6 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: TextField(
                       onChanged: (value) => email = value,
+                      controller: _initialEmail,
                       cursorColor: yPrimaryColor,
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
@@ -97,6 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: TextField(
                       onChanged: (value) => password = value,
+                      controller: _initialPassword,
                       obscureText: true,
                       cursorColor: yPrimaryColor,
                       decoration: InputDecoration(
@@ -113,39 +138,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   SizedBox(height: 10),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                        vertical: yDefaultPadding, horizontal: 16.0),
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(yPrimaryColor),
-                        shape: MaterialStateProperty.all(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12.0),
-                          ),
-                        ),
-                      ),
-                      onPressed: () {
-                        if (email == 'yankaikys@gmail.com' &&
-                            password == '123') {
-                          Navigator.of(context).pushReplacementNamed('/browse');
-                        } else {
-                          print('Invalid login');
-                        }
-                      },
-                      child: SizedBox(
-                        width: size.width,
-                        height: 50,
-                        child: Center(
-                          child: Text(
-                            'Login',
-                            style: TextStyle(fontSize: 18),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  _buildLoginButton(context, size),
                   SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -163,6 +156,43 @@ class _LoginScreenState extends State<LoginScreen> {
                   )
                 ],
               ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Padding _buildLoginButton(BuildContext context, Size size) {
+    return Padding(
+      padding:
+          EdgeInsets.symmetric(vertical: yDefaultPadding, horizontal: 16.0),
+      child: ElevatedButton(
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(yPrimaryColor),
+          shape: MaterialStateProperty.all(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+          ),
+        ),
+        onPressed: () async {
+          await UserSecureStorage.setEmail(email);
+          await UserSecureStorage.setPassword(password);
+
+          if (email == 'yankaikys@gmail.com' && password == '123') {
+            Navigator.of(context).pushReplacementNamed('/browse');
+          } else {
+            print('Invalid login');
+          }
+        },
+        child: SizedBox(
+          width: size.width,
+          height: 50,
+          child: Center(
+            child: Text(
+              'Login',
+              style: TextStyle(fontSize: 18),
             ),
           ),
         ),

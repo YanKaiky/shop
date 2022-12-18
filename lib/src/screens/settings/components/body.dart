@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shop/components/biometric.dart';
 import 'package:shop/src/screens/login/login.screen.dart';
 import 'package:shop/src/utils/constants.dart';
+import 'package:shop/src/utils/user.secure.storage.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -62,7 +63,10 @@ class Body extends StatelessWidget {
           SizedBox(height: 40.0),
           Center(
             child: OutlinedButton(
-              onPressed: () {
+              onPressed: () async {
+                await UserSecureStorage.clearEmail();
+                await UserSecureStorage.clearPassword();
+
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => LoginScreen()),
