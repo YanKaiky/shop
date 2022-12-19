@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shop/components/biometric.dart';
 import 'package:shop/src/screens/login/login.screen.dart';
 import 'package:shop/src/utils/constants.dart';
@@ -44,6 +47,67 @@ class Body extends StatelessWidget {
           buildAccountOptionRow(context, 'Social', null),
           buildAccountOptionRow(context, 'Language', null),
           buildAccountOptionRow(context, 'Privacy and Security', null),
+          buildAccountOptionRow(
+            context,
+            'Close App',
+            () {
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    content: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        Text(
+                          'Close app?',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      ],
+                    ),
+                    actions: [
+                      Center(
+                        child: OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                            padding: EdgeInsets.all(10),
+                            side: BorderSide(
+                              color: Colors.red,
+                              width: 1.0,
+                            ),
+                          ),
+                          onPressed: () {
+                            if (Platform.isAndroid) {
+                              SystemNavigator.pop();
+                            } else if (Platform.isIOS) {
+                              exit(0);
+                            }
+                          },
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: const [
+                              Icon(
+                                Icons.close_rounded,
+                                color: Colors.red,
+                              ),
+                              SizedBox(width: 10),
+                              Text(
+                                'Close App',
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              );
+            },
+          ),
           SizedBox(height: 40.0),
           Row(
             children: const [
@@ -80,7 +144,10 @@ class Body extends StatelessWidget {
                   SizedBox(width: 10),
                   Text(
                     'Logout',
-                    style: TextStyle(color: yPrimaryColor, fontSize: 16),
+                    style: TextStyle(
+                      color: yPrimaryColor,
+                      fontSize: 16,
+                    ),
                   ),
                 ],
               ),
@@ -92,7 +159,10 @@ class Body extends StatelessWidget {
   }
 
   GestureDetector buildAccountOptionRow(
-      BuildContext context, String title, VoidCallback? onTap) {
+    BuildContext context,
+    String title,
+    VoidCallback? onTap,
+  ) {
     return GestureDetector(
       onTap: onTap ??
           () {
@@ -118,7 +188,7 @@ class Body extends StatelessWidget {
                     ElevatedButton(
                       style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(Colors.transparent),
+                            MaterialStateProperty.all(Colors.black),
                         shape: MaterialStateProperty.all(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12.0),

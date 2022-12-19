@@ -35,14 +35,44 @@ class AppMenuDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.data_saver_off_outlined),
             title: const Text('Dashboard'),
+            subtitle: Text(
+              'Admin'.toUpperCase(),
+              style: TextStyle(color: Colors.grey, fontSize: 8),
+            ),
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => DashboardScreen()),
             ),
           ),
+          Divider(),
+          SizedBox(height: 10),
           ListTile(
-            leading: const Icon(Icons.local_grocery_store_outlined),
-            title: const Text('Store'),
+            leading: const Icon(Icons.woman_rounded),
+            title: const Text('Women'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PurchaseScreen()),
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.man_rounded),
+            title: const Text('Men'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PurchaseScreen()),
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.child_care_rounded),
+            title: const Text("Children's"),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PurchaseScreen()),
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.diamond_outlined),
+            title: const Text("Accessories"),
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => PurchaseScreen()),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/models/chart.model.dart';
+import 'package:shop/models/charts.model.dart';
 import 'package:shop/src/utils/constants.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
