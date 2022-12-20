@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop/components/app.menu.drawer.dart';
+import 'package:shop/src/screens/lists/features/components/body.dart';
 import 'package:shop/src/screens/purchase/purchase.screen.dart';
 
 class FeatureClothers extends StatelessWidget {
@@ -13,7 +14,7 @@ class FeatureClothers extends StatelessWidget {
         elevation: 0,
         actions: [
           IconButton(
-            icon: Icon(Icons.local_grocery_store_outlined),
+            icon: Icon(Icons.search),
             onPressed: () => Navigator.push(
               context,
               MaterialPageRoute(
@@ -23,7 +24,7 @@ class FeatureClothers extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(child: Text('Yan')),
+      body: Body(),
     );
   }
 }
