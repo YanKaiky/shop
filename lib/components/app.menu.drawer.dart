@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop/src/screens/dashboard/dashboard.screen.dart';
+import 'package:shop/src/screens/home/home.screen.dart';
 import 'package:shop/src/screens/purchase/purchase.screen.dart';
 import 'package:shop/src/screens/settings/settings.screen.dart';
 import 'package:shop/src/utils/constants.dart';
@@ -42,6 +43,14 @@ class AppMenuDrawer extends StatelessWidget {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => DashboardScreen()),
+            ),
+          ),
+          ListTile(
+            leading: const Icon(Icons.shopping_bag_rounded),
+            title: const Text('Home'),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomeScreen()),
             ),
           ),
           Divider(),
