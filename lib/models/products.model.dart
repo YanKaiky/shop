@@ -77,4 +77,22 @@ List<ProductModel> products = [
     'Nike Black 2',
     'Exercitation reprehenderit culpa minim dolore non velit. Aliquip sunt excepteur quis do esse et magna aliquip reprehenderit quis anim eu qui laboris. Reprehenderit irure nisi eiusmod minim quis esse ea.',
   ),
+  ProductModel(
+    '2ad9399c-0da3-4a41-af28-7ed3416f7611',
+    164,
+    [],
+    Colors.black,
+    'assets/png/faith-gold-necklace.png',
+    'Faith Gold Necklace',
+    'Exercitation reprehenderit culpa minim dolore non velit. Aliquip sunt excepteur quis do esse et magna aliquip reprehenderit quis anim eu qui laboris. Reprehenderit irure nisi eiusmod minim quis esse ea.',
+  ),
+  ProductModel(
+    '8c62d09a-e9df-4d0e-8874-8d91eee3ec40',
+    82,
+    [],
+    Colors.blue[700],
+    'assets/png/bracelet-blue.png',
+    'Bracelet Blue',
+    'Exercitation reprehenderit culpa minim dolore non velit. Aliquip sunt excepteur quis do esse et magna aliquip reprehenderit quis anim eu qui laboris. Reprehenderit irure nisi eiusmod minim quis esse ea.',
+  ),
 ];

@@ -14,11 +14,14 @@ class ItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Expanded(
           child: Container(
+            width: size.width / 2,
             padding: EdgeInsets.all(yDefaultPadding),
             decoration: BoxDecoration(
               color: product.color,
