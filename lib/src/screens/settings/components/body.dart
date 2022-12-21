@@ -14,7 +14,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 25, right: 16, left: 16),
+      padding: EdgeInsets.only(top: 12, right: 16, left: 16),
       child: ListView(
         children: [
           Text(
