@@ -98,7 +98,7 @@ List<ProductModel> products = [
   ProductModel(
     '2ad9399c-0da3-4a41-af28-7ed3416f7611',
     164,
-    [],
+    ['50 cm'],
     Colors.black,
     'assets/images/faith-gold-necklace.png',
     'Faith Gold Necklace',
@@ -107,7 +107,7 @@ List<ProductModel> products = [
   ProductModel(
     '8c62d09a-e9df-4d0e-8874-8d91eee3ec40',
     82,
-    [],
+    ['20 cm'],
     Colors.blue[700],
     'assets/images/bracelet-blue.png',
     'Bracelet Blue',
