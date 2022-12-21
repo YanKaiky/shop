@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop/models/products.model.dart';
+import 'package:shop/src/screens/details/components/body.dart';
+import 'package:shop/src/screens/purchase/purchase.screen.dart';
 import 'package:shop/src/utils/constants.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -10,8 +12,17 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          leading: IconButton(
+      backgroundColor: product.color,
+      appBar: buildAppBar(context),
+      body: Body(product: product),
+    );
+  }
+
+  AppBar buildAppBar(BuildContext context) {
+    return AppBar(
+      backgroundColor: product.color,
+      elevation: 0,
+      leading: IconButton(
         padding: EdgeInsets.symmetric(
           horizontal: yDefaultPadding,
         ),
@@ -19,9 +30,19 @@ class DetailsScreen extends StatelessWidget {
           Icons.arrow_back_rounded,
           color: Colors.white,
         ),
-        onPressed: () => Navigator.of(context).pushReplacementNamed('/browse'),
-      )),
-      body: Center(child: Text('Empty')),
+        onPressed: () => Navigator.pop(context),
+      ),
+      actions: [
+        IconButton(
+          icon: Icon(Icons.local_grocery_store_outlined),
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => PurchaseScreen(),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
