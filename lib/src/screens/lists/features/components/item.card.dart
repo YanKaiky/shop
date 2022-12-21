@@ -16,32 +16,35 @@ class ItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Expanded(
-          child: Container(
-            width: size.width / 2,
-            padding: EdgeInsets.all(yDefaultPadding),
-            decoration: BoxDecoration(
-              color: product.color,
-              borderRadius: BorderRadius.circular(16),
+    return GestureDetector(
+      onTap: press,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              width: size.width / 2,
+              padding: EdgeInsets.all(yDefaultPadding),
+              decoration: BoxDecoration(
+                color: product.color,
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Image.asset(product.image),
             ),
-            child: Image.asset(product.image),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: yDefaultPadding / 4),
-          child: Text(
-            product.title,
-            style: TextStyle(color: yTextLightColor),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: yDefaultPadding / 4),
+            child: Text(
+              product.title,
+              style: TextStyle(color: yTextLightColor),
+            ),
           ),
-        ),
-        Text(
-          '\$${product.price}',
-          style: TextStyle(fontWeight: FontWeight.bold),
-        ),
-      ],
+          Text(
+            '\$${product.price}',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ],
+      ),
     );
   }
 }

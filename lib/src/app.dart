@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:shop/components/biometric.dart';
-import 'package:shop/src/screens/details/details.screen.dart';
 import 'package:shop/src/screens/favorites/favorites.screen.dart';
 import 'package:shop/src/screens/home/home.screen.dart';
 import 'package:shop/src/screens/login/login.screen.dart';
@@ -31,7 +30,6 @@ class App extends StatelessWidget {
         '/biometric': (context) => Biometric(),
         '/login': (context) => LoginScreen(),
         '/browse': (context) => HomeScreen(),
-        '/details': (context) => DetailsScreen(),
         '/favorites': (context) => FavoritesScreen(),
         '/notifications': (context) => NotificationsScreen(),
         '/profile': (context) => ProfileScreen(),

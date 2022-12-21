@@ -27,7 +27,7 @@ class RecomendsClothes extends StatelessWidget {
             press: () => Navigator.of(context).pushReplacementNamed('/details'),
           ),
           RecomendClothesCard(
-            image: 'assets/images/nike-beco-2.png',
+            image: 'assets/images/nike-beco-2-black.png',
             title: 'Nike Beco 2',
             category: 'Society',
             price: 309,

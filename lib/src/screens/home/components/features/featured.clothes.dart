@@ -29,7 +29,7 @@ class FeaturedClothes extends StatelessWidget {
             press: (() {}),
           ),
           FeatureClothesCard(
-            image: 'assets/images/air-jordan-1-mid-se.png',
+            image: 'assets/images/air-jordan-1-mid-se-red.png',
             press: (() {}),
           ),
           FeatureClothesCard(
