@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/models/products.model.dart';
+import 'package:shop/repositories/product.repository.dart';
 import 'package:shop/src/screens/details/details.screen.dart';
 import 'package:shop/src/screens/lists/features/components/categories.dart';
 import 'package:shop/src/screens/lists/features/components/item.card.dart';
@@ -10,6 +10,8 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final products = ProductRepository.products;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
