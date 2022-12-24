@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:shop/models/recommends.model.dart';
 import 'package:shop/src/utils/constants.dart';
 
 class RecomendClothesCard extends StatelessWidget {
   const RecomendClothesCard({
     Key? key,
-    required this.image,
-    required this.title,
-    required this.category,
-    required this.price,
     required this.press,
+    required this.recommend,
   }) : super(key: key);
 
-  final String image, title, category;
-  final int price;
   final VoidCallback press;
+  final RecommendsModel recommend;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +24,7 @@ class RecomendClothesCard extends StatelessWidget {
       width: size.width * 0.4,
       child: Column(
         children: <Widget>[
-          Image.asset(image),
+          Image.asset(recommend.image),
           GestureDetector(
             onTap: press,
             child: Container(
@@ -52,11 +49,11 @@ class RecomendClothesCard extends StatelessWidget {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: '$title\n'.toUpperCase(),
+                          text: '${recommend.title}\n'.toUpperCase(),
                           style: Theme.of(context).textTheme.button,
                         ),
                         TextSpan(
-                          text: category.toUpperCase(),
+                          text: recommend.category.toUpperCase(),
                           style: TextStyle(
                             color: yPrimaryColor.withOpacity(0.4),
                           ),
@@ -66,7 +63,7 @@ class RecomendClothesCard extends StatelessWidget {
                   ),
                   Spacer(),
                   Text(
-                    '\$$price',
+                    '\$${recommend.price}',
                     style: Theme.of(context)
                         .textTheme
                         .button
