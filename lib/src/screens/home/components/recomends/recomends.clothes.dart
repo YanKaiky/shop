@@ -9,25 +9,21 @@ class RecomendsClothes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     final recommends = RecommendsRepository.recommends;
 
-    return Row(
-      children: [
-        SizedBox(
-          width: double.infinity,
-          height: 100.0,
-          child: PageView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: recommends.length,
-            itemBuilder: (context, i) {
-              return RecomendClothesCard(
-                recommend: recommends[i],
-                press: () {},
-              );
-            },
-          ),
-        ),
-      ],
+    return SizedBox(
+      height: size.height * 0.35,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: recommends.length,
+        itemBuilder: (context, i) {
+          return RecomendClothesCard(
+            recommend: recommends[i],
+            press: () {},
+          );
+        },
+      ),
     );
   }
 }

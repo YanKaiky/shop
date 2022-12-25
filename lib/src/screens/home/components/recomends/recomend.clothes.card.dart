@@ -15,6 +15,7 @@ class RecomendClothesCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
     return Container(
       margin: EdgeInsets.only(
         left: yDefaultPadding,
@@ -28,7 +29,7 @@ class RecomendClothesCard extends StatelessWidget {
           GestureDetector(
             onTap: press,
             child: Container(
-              padding: EdgeInsets.all(yDefaultPadding / 2),
+              padding: EdgeInsets.all(yDefaultPadding / 3),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -49,26 +50,22 @@ class RecomendClothesCard extends StatelessWidget {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: '${recommend.title}\n'.toUpperCase(),
-                          style: Theme.of(context).textTheme.button,
-                        ),
-                        TextSpan(
-                          text: recommend.category.toUpperCase(),
+                          text: recommend.title.length >= 17
+                              ? '${recommend.title.substring(0, 17).toUpperCase()}...\n'
+                              : '${recommend.title.toUpperCase()}\n',
                           style: TextStyle(
                             color: yPrimaryColor.withOpacity(0.4),
                           ),
                         ),
+                        TextSpan(
+                          text: '\$${recommend.price}',
+                          style: Theme.of(context).textTheme.button?.copyWith(
+                                color: yPrimaryColor,
+                              ),
+                        ),
                       ],
                     ),
                   ),
-                  Spacer(),
-                  Text(
-                    '\$${recommend.price}',
-                    style: Theme.of(context)
-                        .textTheme
-                        .button
-                        ?.copyWith(color: yPrimaryColor),
-                  )
                 ],
               ),
             ),
