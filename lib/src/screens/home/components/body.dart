@@ -3,6 +3,7 @@ import 'package:shop/src/screens/home/components/most.wanted/most.wanted.dart';
 import 'package:shop/src/screens/home/components/header.with.search.box.dart';
 import 'package:shop/src/screens/home/components/recomends/recomends.clothes.dart';
 import 'package:shop/src/screens/home/components/title.with.more.btn.dart';
+import 'package:shop/src/screens/lists/most.wanted/most.wanted.screen.dart';
 import 'package:shop/src/utils/constants.dart';
 
 class Body extends StatelessWidget {
@@ -23,7 +24,7 @@ class Body extends StatelessWidget {
               press: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MostWanted()),
+                  MaterialPageRoute(builder: (context) => MostWantedScreen()),
                 );
               }),
           MostWanted(),

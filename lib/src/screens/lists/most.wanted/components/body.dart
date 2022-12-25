@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/repositories/product.repository.dart';
-import 'package:shop/src/screens/details/details.screen.dart';
+import 'package:shop/repositories/most.wanted.repository.dart';
 import 'package:shop/src/screens/lists/most.wanted/components/categories.dart';
 import 'package:shop/src/screens/lists/most.wanted/components/item.card.dart';
 import 'package:shop/src/utils/constants.dart';
@@ -10,7 +9,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final products = ProductRepository.products;
+    final mostWanteds = MostWantedRepository.mostWanteds;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +37,7 @@ class Body extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: yDefaultPadding),
             child: GridView.builder(
-              itemCount: products.length,
+              itemCount: mostWanteds.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: yDefaultPadding,
@@ -46,15 +45,8 @@ class Body extends StatelessWidget {
                 childAspectRatio: 0.75,
               ),
               itemBuilder: (context, i) => ItemCard(
-                product: products[i],
-                press: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => DetailsScreen(
-                      product: products[i],
-                    ),
-                  ),
-                ),
+                mostWanted: mostWanteds[i],
+                press: () {},
               ),
             ),
           ),

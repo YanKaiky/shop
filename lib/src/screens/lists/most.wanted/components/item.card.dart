@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:shop/models/products.model.dart';
+import 'package:shop/models/most.wanted.model.dart';
 import 'package:shop/src/utils/constants.dart';
 
 class ItemCard extends StatelessWidget {
-  final ProductModel product;
+  final MostWantedModel mostWanted;
   final VoidCallback press;
 
   const ItemCard({
     Key? key,
-    required this.product,
+    required this.mostWanted,
     required this.press,
   }) : super(key: key);
 
@@ -21,26 +21,29 @@ class ItemCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Expanded(
+          Flexible(
             child: Container(
               width: size.width / 2,
               padding: EdgeInsets.all(yDefaultPadding),
               decoration: BoxDecoration(
-                color: product.color,
+                color: mostWanted.color,
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: Hero(tag: product.guid, child: Image.asset(product.image)),
+              child: Hero(
+                tag: mostWanted.guid,
+                child: Image.asset(mostWanted.image),
+              ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: yDefaultPadding / 4),
             child: Text(
-              product.title,
+              mostWanted.title,
               style: TextStyle(color: yTextLightColor),
             ),
           ),
           Text(
-            '\$${product.price}',
+            '\$${mostWanted.price}',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
         ],
