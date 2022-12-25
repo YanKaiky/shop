@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shop/src/utils/constants.dart';
 
-class FeatureClothesCard extends StatelessWidget {
-  const FeatureClothesCard({
+class MostWantedCard extends StatelessWidget {
+  const MostWantedCard({
     Key? key,
     required this.image,
     required this.press,

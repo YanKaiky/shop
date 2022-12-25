@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shop/repositories/product.repository.dart';
 import 'package:shop/src/screens/details/details.screen.dart';
-import 'package:shop/src/screens/lists/features/components/categories.dart';
-import 'package:shop/src/screens/lists/features/components/item.card.dart';
+import 'package:shop/src/screens/lists/most.wanted/components/categories.dart';
+import 'package:shop/src/screens/lists/most.wanted/components/item.card.dart';
 import 'package:shop/src/utils/constants.dart';
 
 class Body extends StatelessWidget {
@@ -25,7 +25,7 @@ class Body extends StatelessWidget {
               ),
               SizedBox(width: 15),
               Text(
-                'Feature Clothers',
+                'Most wanted',
                 style: Theme.of(context).textTheme.headline5?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
