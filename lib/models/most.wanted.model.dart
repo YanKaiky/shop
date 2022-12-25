@@ -11,6 +11,8 @@ class MostWantedModel {
   final String image;
   final String title;
   final String description;
+  final DateTime createdAt;
+  final DateTime updatedAt;
 
   MostWantedModel(
     this.guid,
@@ -21,5 +23,7 @@ class MostWantedModel {
     this.image,
     this.title,
     this.description,
+    this.createdAt,
+    this.updatedAt,
   );
 }

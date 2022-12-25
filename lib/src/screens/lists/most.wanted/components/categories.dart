@@ -10,23 +10,25 @@ class Categrories extends StatefulWidget {
 
 class _CategroriesState extends State<Categrories> {
   List<String> categories = [
-    'Jordan',
-    'Football boots',
-    'Hoodies',
-    'Accessories'
+    'All',
+    'Recents',
+    'Promotion',
   ];
   int index = 0;
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: yDefaultPadding),
       child: SizedBox(
         height: 25,
-        child: ListView.builder(
+        child: ListView.separated(
           scrollDirection: Axis.horizontal,
           itemCount: categories.length,
           itemBuilder: (content, i) => _buildCategory(i),
+          separatorBuilder: (content, _) => SizedBox(width: size.width / 6),
         ),
       ),
     );
