@@ -27,6 +27,7 @@ class MostWantedCard extends StatelessWidget {
         height: 185,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: Colors.white),
           image: DecorationImage(
             fit: BoxFit.cover,
             image: AssetImage(image),

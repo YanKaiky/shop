@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:shop/repositories/recommends.repository.dart';
-import 'package:shop/src/screens/home/components/recomends/recomend.clothes.card.dart';
+import 'package:shop/repositories/recommended.repository.dart';
+import 'package:shop/src/screens/home/components/recomended/recomend.clothes.card.dart';
 
-class RecomendsClothes extends StatelessWidget {
-  const RecomendsClothes({
+class RecomendedClothes extends StatelessWidget {
+  const RecomendedClothes({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    final recommends = RecommendsRepository.recommends;
+    final recommends = RecommendedRepository.recommends;
 
     return SizedBox(
       height: size.height * 0.35,

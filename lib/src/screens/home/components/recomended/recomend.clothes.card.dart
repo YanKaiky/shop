@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop/models/recommends.model.dart';
+import 'package:shop/models/recommended.model.dart';
 import 'package:shop/src/utils/constants.dart';
 
 class RecomendClothesCard extends StatelessWidget {
@@ -10,7 +10,7 @@ class RecomendClothesCard extends StatelessWidget {
   }) : super(key: key);
 
   final VoidCallback press;
-  final RecommendsModel recommend;
+  final RecommendedModel recommend;
 
   @override
   Widget build(BuildContext context) {

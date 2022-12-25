@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class RecommendsModel {
+class RecommendedModel {
   final String guid;
   final int price;
   final String category;
@@ -12,7 +12,7 @@ class RecommendsModel {
   final String title;
   final String description;
 
-  RecommendsModel(
+  RecommendedModel(
     this.guid,
     this.price,
     this.category,

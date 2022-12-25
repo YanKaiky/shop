@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shop/models/recommends.model.dart';
+import 'package:shop/models/recommended.model.dart';
 
-class RecommendsRepository {
-  static List<RecommendsModel> recommends = [
-    RecommendsModel(
+class RecommendedRepository {
+  static List<RecommendedModel> recommends = [
+    RecommendedModel(
       '700676ca-61f8-477f-98c9-95fe0c687766',
       1999,
       'Football Boots',
@@ -13,7 +13,7 @@ class RecommendsRepository {
       'Ultra Venom',
       'Exercitation reprehenderit culpa minim dolore non velit. Aliquip sunt excepteur quis do esse et magna aliquip reprehenderit quis anim eu qui laboris. Reprehenderit irure nisi eiusmod minim quis esse ea.',
     ),
-    RecommendsModel(
+    RecommendedModel(
       '27dbceab-c7fd-469e-a046-d212ce0d6be6',
       810,
       'Football Boots',
@@ -23,7 +23,7 @@ class RecommendsRepository {
       'Mercurial Superfly 9 Academy',
       'Exercitation reprehenderit culpa minim dolore non velit. Aliquip sunt excepteur quis do esse et magna aliquip reprehenderit quis anim eu qui laboris. Reprehenderit irure nisi eiusmod minim quis esse ea.',
     ),
-    RecommendsModel(
+    RecommendedModel(
       'f8971742-f107-47cd-b025-721007dc0efc',
       329,
       'Football Boots',
@@ -33,7 +33,7 @@ class RecommendsRepository {
       'Nike Beco 2 Black',
       'Exercitation reprehenderit culpa minim dolore non velit. Aliquip sunt excepteur quis do esse et magna aliquip reprehenderit quis anim eu qui laboris. Reprehenderit irure nisi eiusmod minim quis esse ea.',
     ),
-    RecommendsModel(
+    RecommendedModel(
       '6aa32254-a0a9-4905-8b87-efbed9dc7baa',
       309,
       'Football Boots',
@@ -43,7 +43,7 @@ class RecommendsRepository {
       'Nike Beco 2 Blue',
       'Exercitation reprehenderit culpa minim dolore non velit. Aliquip sunt excepteur quis do esse et magna aliquip reprehenderit quis anim eu qui laboris. Reprehenderit irure nisi eiusmod minim quis esse ea.',
     ),
-    RecommendsModel(
+    RecommendedModel(
       'f755ac0a-9dc8-4a23-81d3-761460eba4a9',
       369,
       'Football Boots',
@@ -53,7 +53,7 @@ class RecommendsRepository {
       'Nike Mercurial Vapor 15 Club',
       'Exercitation reprehenderit culpa minim dolore non velit. Aliquip sunt excepteur quis do esse et magna aliquip reprehenderit quis anim eu qui laboris. Reprehenderit irure nisi eiusmod minim quis esse ea.',
     ),
-    RecommendsModel(
+    RecommendedModel(
       'a3b0fcc6-afe7-4b96-990b-8828fb070e29',
       300,
       'Football Boots',
@@ -63,7 +63,7 @@ class RecommendsRepository {
       'Nike Mercurial Superfly 8 Club',
       'Exercitation reprehenderit culpa minim dolore non velit. Aliquip sunt excepteur quis do esse et magna aliquip reprehenderit quis anim eu qui laboris. Reprehenderit irure nisi eiusmod minim quis esse ea.',
     ),
-    RecommendsModel(
+    RecommendedModel(
       '89c51ef2-8e5a-4530-aa20-7254da95eac9',
       499,
       'Football Boots',
